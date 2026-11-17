@@ -1,0 +1,29 @@
+{
+ "name": "a320c1l",
+ "sizes": [
+  351,
+  320,
+  32,
+  1
+ ],
+ "weights": 122945,
+ "records": 32130137,
+ "epochs": 4,
+ "lambda": 0.0,
+ "w_copy": 1.0,
+ "init": "students/s320b.bin",
+ "share": 1.0,
+ "luck": true,
+ "held": {
+  "loss_net": 0.37572067975997925,
+  "loss_own": 0.3789058327674866,
+  "loss_search": 0.36900049448013306,
+  "loss_net_searched": 0.36139169335365295,
+  "loss_own_searched": 0.36462435126304626,
+  "rmse_to_search": 0.05841071158647537,
+  "searched_share": 0.6926259398460388,
+  "loss_net_explored": 0.39320990443229675,
+  "loss_search_explored": 0.39820560812950134,
+  "copy_rmse_logit": 0.13373523950576782
+ }
+}

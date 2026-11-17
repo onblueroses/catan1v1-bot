@@ -1,0 +1,4 @@
+# The first network layer is an i32 multiply-accumulate; native vector units make it several times faster.
+# Rust never contracts float operations into FMA, so this does not change any value.
+[build]
+rustflags = ["-C", "target-cpu=native"]

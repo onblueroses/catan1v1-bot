@@ -1,0 +1,33 @@
+--- a/ENCODING.md
++++ b/ENCODING.md
+@@ -147,7 +147,10 @@
+ 
+ 1. Setup is complete (`setup_pairs_done=4`), and the phase is not TERMINAL.
+ 2. Both players' total points are strictly below `victory_points`.
+-3. Each player has all 15 road pieces on the board.
++3. For each player, either all 15 road pieces are on the board or no geometrically eligible road edge exists.
++   Such an edge is empty and has at least one endpoint that either contains that player's settlement or city,
++   or is empty and touches that player's road. An opponent building blocks passage and does not supply a connection.
++   Ignore affordability in this check.
+ 4. Neither player has a geometrically eligible settlement node. Such a node is empty, has no occupied neighbor,
+    and touches that player's road. Ignore affordability and settlement stock in this check.
+ 5. Each player has either all four cities on the board or no settlement to upgrade.
+@@ -159,8 +162,16 @@
+ The predicate uses the omniscient state. It is not an observation feature.
+ These conditions are conservative. False does not assert that a winner remains reachable.
+ 
+-Conditions 3 through 5 freeze the board. No road piece remains, no settlement site exists, and no city upgrade remains.
+-No accepted action can remove a road or building. Road connectivity, road cuts, ports and Longest Road stay fixed.
++Conditions 3 through 5 freeze road and building occupancy together. Suppose there were a first transition that changed either.
++It cannot place a road: that player has no piece or no geometrically eligible edge in the unchanged occupancy.
++It cannot place a settlement: no geometrically eligible node exists, regardless of resources or stock.
++It cannot upgrade a settlement: no city piece or no owned settlement remains. Thus no first occupancy change exists.
++A new own road connection could arise only through an own road or building placement, both excluded above.
++An opponent building blocks connections. No action removes a road or building or transfers its ownership.
++Resource transfers cannot create a geometric site. Piece stocks, road connectivity, road cuts, ports and Longest Road stay fixed.
++These statements concern valid, normalized states. With unused road stock but no eligible edge,
++default Road Building can consume its card and complete immediately without placing a road.
++A no-edge ROAD_BUILDING decision is not a valid returned state: forced completion runs inside apply.
+ Condition 6 prevents new development cards and fixes the VP cards held by each player.
+ For an army holder, the competitor's remaining total cannot exceed the holder's current played count.
+ Playing a knight preserves that competitor total and cannot decrease the holder's played count.

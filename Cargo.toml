@@ -1,0 +1,11 @@
+[workspace]
+members = ["engine", "bot"]
+resolver = "3"
+
+[profile.release]
+lto = "thin"
+codegen-units = 1
+debug = 1
+
+[profile.test]
+opt-level = 3

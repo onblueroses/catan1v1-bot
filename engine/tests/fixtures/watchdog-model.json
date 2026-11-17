@@ -1,0 +1,1705 @@
+{
+  "version": 1,
+  "policy": "spending-preferring-uniform",
+  "basis": "First mark: the observed maximum completed length (6159 steps) of 205 completed and 1 censored games; it logs and continues. Second mark: ceiling of the fitted lognormal tail quantile (11836 steps); it fails only if the game is still unresolved. Batch false-alarm risk 1/(205+1), divided across a batch of 400 games.",
+  "first_mark_steps": 6159,
+  "second_mark_steps": 11836,
+  "first_mark_rule": "Observed maximum completed length. Save a mark and continue.",
+  "second_mark_rule": "Ceiling of fitted lognormal tail quantile. Fail only if still unresolved.",
+  "completed_count": 205,
+  "censored_count": 1,
+  "batch_size": 400,
+  "batch_false_alarm_rationale": "1/(completed_count+1), one empirical rank unit.",
+  "nominal_batch_false_alarm_bound": 0.0048543689320388345,
+  "nominal_per_game_false_alarm": 1.2135922330097088e-05,
+  "fit": {
+    "method": "Lognormal MLE with right-censor likelihood, truncated-normal EM",
+    "mu": 7.493848059638708,
+    "sigma": 0.4465272840981631,
+    "representable_updates": 8,
+    "stop": "A binary64 parameter pair repeats.",
+    "normal_quantile": 4.221466114444296,
+    "length_quantile": 11835.370875488132
+  },
+  "assumptions": [
+    "The spending-preferring policy and the pooled four configurations remain comparable.",
+    "Log lengths follow one normal distribution, including the unobserved tail.",
+    "The censor bound contributes survival likelihood, not a completed game length.",
+    "The rate is nominal under fitted parameters. It excludes parameter uncertainty and model error.",
+    "This diagnostic failure cannot establish nontermination or change a game result."
+  ],
+  "sample_summary": {
+    "min": 498,
+    "median": 1813,
+    "max": 6159
+  },
+  "sources": [
+    {
+      "path": "e10-fresh-400.log (property-test log, not included)",
+      "sha256": "48d15f07a35c9ebe5fb6a0a5bdb994c4372b7791d0ee5def1cb968f98c202fdc",
+      "completed_count": 205,
+      "censored_count": 1
+    }
+  ],
+  "reference_sources": [
+    {
+      "path": "extended.log (property-test log, not included)",
+      "sha256": "babbb0095ae58eddc0c8f118fafcf6e1f827d2ca78d4ac3c3e8afb39c80659f1",
+      "completed_count": 190,
+      "censored_count": 0,
+      "role": "reference only, excluded from fit",
+      "median": 1783.0,
+      "upper_middle_order_statistic": 1790,
+      "max": 6159
+    }
+  ],
+  "completed": [
+    {
+      "seed": 1,
+      "dice": 0,
+      "first_player": 0,
+      "steps": 2206,
+      "turns": 569,
+      "result": "winner"
+    },
+    {
+      "seed": 2,
+      "dice": 0,
+      "first_player": 1,
+      "steps": 2136,
+      "turns": 502,
+      "result": "winner"
+    },
+    {
+      "seed": 3,
+      "dice": 1,
+      "first_player": 0,
+      "steps": 1166,
+      "turns": 298,
+      "result": "winner"
+    },
+    {
+      "seed": 4,
+      "dice": 1,
+      "first_player": 1,
+      "steps": 2505,
+      "turns": 535,
+      "result": "winner"
+    },
+    {
+      "seed": 5,
+      "dice": 0,
+      "first_player": 0,
+      "steps": 1420,
+      "turns": 335,
+      "result": "winner"
+    },
+    {
+      "seed": 6,
+      "dice": 0,
+      "first_player": 1,
+      "steps": 1894,
+      "turns": 464,
+      "result": "winner"
+    },
+    {
+      "seed": 7,
+      "dice": 1,
+      "first_player": 0,
+      "steps": 1088,
+      "turns": 257,
+      "result": "winner"
+    },
+    {
+      "seed": 8,
+      "dice": 1,
+      "first_player": 1,
+      "steps": 1405,
+      "turns": 342,
+      "result": "winner"
+    },
+    {
+      "seed": 9,
+      "dice": 0,
+      "first_player": 0,
+      "steps": 2030,
+      "turns": 480,
+      "result": "winner"
+    },
+    {
+      "seed": 10,
+      "dice": 0,
+      "first_player": 1,
+      "steps": 1085,
+      "turns": 243,
+      "result": "winner"
+    },
+    {
+      "seed": 11,
+      "dice": 1,
+      "first_player": 0,
+      "steps": 1745,
+      "turns": 443,
+      "result": "winner"
+    },
+    {
+      "seed": 12,
+      "dice": 1,
+      "first_player": 1,
+      "steps": 953,
+      "turns": 221,
+      "result": "winner"
+    },
+    {
+      "seed": 13,
+      "dice": 0,
+      "first_player": 0,
+      "steps": 2495,
+      "turns": 671,
+      "result": "winner"
+    },
+    {
+      "seed": 14,
+      "dice": 0,
+      "first_player": 1,
+      "steps": 1909,
+      "turns": 451,
+      "result": "winner"
+    },
+    {
+      "seed": 15,
+      "dice": 1,
+      "first_player": 0,
+      "steps": 2392,
+      "turns": 524,
+      "result": "winner"
+    },
+    {
+      "seed": 16,
+      "dice": 1,
+      "first_player": 1,
+      "steps": 2522,
+      "turns": 556,
+      "result": "winner"
+    },
+    {
+      "seed": 17,
+      "dice": 0,
+      "first_player": 0,
+      "steps": 1766,
+      "turns": 458,
+      "result": "winner"
+    },
+    {
+      "seed": 18,
+      "dice": 0,
+      "first_player": 1,
+      "steps": 1306,
+      "turns": 308,
+      "result": "winner"
+    },
+    {
+      "seed": 19,
+      "dice": 1,
+      "first_player": 0,
+      "steps": 2936,
+      "turns": 808,
+      "result": "winner"
+    },
+    {
+      "seed": 20,
+      "dice": 1,
+      "first_player": 1,
+      "steps": 1469,
+      "turns": 355,
+      "result": "winner"
+    },
+    {
+      "seed": 21,
+      "dice": 0,
+      "first_player": 0,
+      "steps": 1523,
+      "turns": 364,
+      "result": "winner"
+    },
+    {
+      "seed": 22,
+      "dice": 0,
+      "first_player": 1,
+      "steps": 868,
+      "turns": 211,
+      "result": "winner"
+    },
+    {
+      "seed": 23,
+      "dice": 1,
+      "first_player": 0,
+      "steps": 1694,
+      "turns": 371,
+      "result": "winner"
+    },
+    {
+      "seed": 24,
+      "dice": 1,
+      "first_player": 1,
+      "steps": 1299,
+      "turns": 287,
+      "result": "winner"
+    },
+    {
+      "seed": 25,
+      "dice": 0,
+      "first_player": 0,
+      "steps": 1395,
+      "turns": 329,
+      "result": "winner"
+    },
+    {
+      "seed": 26,
+      "dice": 0,
+      "first_player": 1,
+      "steps": 1882,
+      "turns": 431,
+      "result": "winner"
+    },
+    {
+      "seed": 27,
+      "dice": 1,
+      "first_player": 0,
+      "steps": 1813,
+      "turns": 442,
+      "result": "winner"
+    },
+    {
+      "seed": 28,
+      "dice": 1,
+      "first_player": 1,
+      "steps": 4497,
+      "turns": 985,
+      "result": "winner"
+    },
+    {
+      "seed": 29,
+      "dice": 0,
+      "first_player": 0,
+      "steps": 6159,
+      "turns": 1192,
+      "result": "winner"
+    },
+    {
+      "seed": 30,
+      "dice": 0,
+      "first_player": 1,
+      "steps": 2054,
+      "turns": 475,
+      "result": "winner"
+    },
+    {
+      "seed": 31,
+      "dice": 1,
+      "first_player": 0,
+      "steps": 3127,
+      "turns": 691,
+      "result": "winner"
+    },
+    {
+      "seed": 32,
+      "dice": 1,
+      "first_player": 1,
+      "steps": 1514,
+      "turns": 364,
+      "result": "winner"
+    },
+    {
+      "seed": 33,
+      "dice": 0,
+      "first_player": 0,
+      "steps": 2606,
+      "turns": 690,
+      "result": "winner"
+    },
+    {
+      "seed": 34,
+      "dice": 0,
+      "first_player": 1,
+      "steps": 2378,
+      "turns": 598,
+      "result": "winner"
+    },
+    {
+      "seed": 35,
+      "dice": 1,
+      "first_player": 0,
+      "steps": 1692,
+      "turns": 393,
+      "result": "winner"
+    },
+    {
+      "seed": 36,
+      "dice": 1,
+      "first_player": 1,
+      "steps": 3174,
+      "turns": 707,
+      "result": "winner"
+    },
+    {
+      "seed": 37,
+      "dice": 0,
+      "first_player": 0,
+      "steps": 2508,
+      "turns": 563,
+      "result": "winner"
+    },
+    {
+      "seed": 38,
+      "dice": 0,
+      "first_player": 1,
+      "steps": 1141,
+      "turns": 254,
+      "result": "winner"
+    },
+    {
+      "seed": 39,
+      "dice": 1,
+      "first_player": 0,
+      "steps": 1716,
+      "turns": 416,
+      "result": "winner"
+    },
+    {
+      "seed": 40,
+      "dice": 1,
+      "first_player": 1,
+      "steps": 2971,
+      "turns": 778,
+      "result": "winner"
+    },
+    {
+      "seed": 41,
+      "dice": 0,
+      "first_player": 0,
+      "steps": 2429,
+      "turns": 667,
+      "result": "winner"
+    },
+    {
+      "seed": 42,
+      "dice": 0,
+      "first_player": 1,
+      "steps": 861,
+      "turns": 205,
+      "result": "winner"
+    },
+    {
+      "seed": 43,
+      "dice": 1,
+      "first_player": 0,
+      "steps": 4918,
+      "turns": 1385,
+      "result": "winner"
+    },
+    {
+      "seed": 44,
+      "dice": 1,
+      "first_player": 1,
+      "steps": 1631,
+      "turns": 359,
+      "result": "winner"
+    },
+    {
+      "seed": 45,
+      "dice": 0,
+      "first_player": 0,
+      "steps": 1927,
+      "turns": 452,
+      "result": "winner"
+    },
+    {
+      "seed": 46,
+      "dice": 0,
+      "first_player": 1,
+      "steps": 3137,
+      "turns": 845,
+      "result": "winner"
+    },
+    {
+      "seed": 47,
+      "dice": 1,
+      "first_player": 0,
+      "steps": 2266,
+      "turns": 563,
+      "result": "winner"
+    },
+    {
+      "seed": 48,
+      "dice": 1,
+      "first_player": 1,
+      "steps": 1329,
+      "turns": 289,
+      "result": "winner"
+    },
+    {
+      "seed": 49,
+      "dice": 0,
+      "first_player": 0,
+      "steps": 3078,
+      "turns": 798,
+      "result": "winner"
+    },
+    {
+      "seed": 50,
+      "dice": 0,
+      "first_player": 1,
+      "steps": 1140,
+      "turns": 284,
+      "result": "winner"
+    },
+    {
+      "seed": 51,
+      "dice": 1,
+      "first_player": 0,
+      "steps": 1234,
+      "turns": 289,
+      "result": "winner"
+    },
+    {
+      "seed": 52,
+      "dice": 1,
+      "first_player": 1,
+      "steps": 1225,
+      "turns": 282,
+      "result": "winner"
+    },
+    {
+      "seed": 53,
+      "dice": 0,
+      "first_player": 0,
+      "steps": 1770,
+      "turns": 456,
+      "result": "winner"
+    },
+    {
+      "seed": 54,
+      "dice": 0,
+      "first_player": 1,
+      "steps": 985,
+      "turns": 224,
+      "result": "winner"
+    },
+    {
+      "seed": 55,
+      "dice": 1,
+      "first_player": 0,
+      "steps": 2059,
+      "turns": 533,
+      "result": "winner"
+    },
+    {
+      "seed": 56,
+      "dice": 1,
+      "first_player": 1,
+      "steps": 2126,
+      "turns": 513,
+      "result": "winner"
+    },
+    {
+      "seed": 57,
+      "dice": 0,
+      "first_player": 0,
+      "steps": 1579,
+      "turns": 380,
+      "result": "winner"
+    },
+    {
+      "seed": 58,
+      "dice": 0,
+      "first_player": 1,
+      "steps": 1659,
+      "turns": 390,
+      "result": "winner"
+    },
+    {
+      "seed": 59,
+      "dice": 1,
+      "first_player": 0,
+      "steps": 2633,
+      "turns": 588,
+      "result": "winner"
+    },
+    {
+      "seed": 60,
+      "dice": 1,
+      "first_player": 1,
+      "steps": 3667,
+      "turns": 953,
+      "result": "winner"
+    },
+    {
+      "seed": 61,
+      "dice": 0,
+      "first_player": 0,
+      "steps": 1267,
+      "turns": 315,
+      "result": "winner"
+    },
+    {
+      "seed": 62,
+      "dice": 0,
+      "first_player": 1,
+      "steps": 2348,
+      "turns": 510,
+      "result": "winner"
+    },
+    {
+      "seed": 63,
+      "dice": 1,
+      "first_player": 0,
+      "steps": 2445,
+      "turns": 643,
+      "result": "winner"
+    },
+    {
+      "seed": 64,
+      "dice": 1,
+      "first_player": 1,
+      "steps": 1768,
+      "turns": 436,
+      "result": "winner"
+    },
+    {
+      "seed": 65,
+      "dice": 0,
+      "first_player": 0,
+      "steps": 1840,
+      "turns": 461,
+      "result": "winner"
+    },
+    {
+      "seed": 66,
+      "dice": 0,
+      "first_player": 1,
+      "steps": 1014,
+      "turns": 242,
+      "result": "winner"
+    },
+    {
+      "seed": 67,
+      "dice": 1,
+      "first_player": 0,
+      "steps": 1376,
+      "turns": 327,
+      "result": "winner"
+    },
+    {
+      "seed": 68,
+      "dice": 1,
+      "first_player": 1,
+      "steps": 1634,
+      "turns": 433,
+      "result": "winner"
+    },
+    {
+      "seed": 69,
+      "dice": 0,
+      "first_player": 0,
+      "steps": 2287,
+      "turns": 508,
+      "result": "winner"
+    },
+    {
+      "seed": 70,
+      "dice": 0,
+      "first_player": 1,
+      "steps": 908,
+      "turns": 215,
+      "result": "winner"
+    },
+    {
+      "seed": 71,
+      "dice": 1,
+      "first_player": 0,
+      "steps": 1671,
+      "turns": 410,
+      "result": "winner"
+    },
+    {
+      "seed": 72,
+      "dice": 1,
+      "first_player": 1,
+      "steps": 1394,
+      "turns": 348,
+      "result": "winner"
+    },
+    {
+      "seed": 73,
+      "dice": 0,
+      "first_player": 0,
+      "steps": 1883,
+      "turns": 478,
+      "result": "winner"
+    },
+    {
+      "seed": 74,
+      "dice": 0,
+      "first_player": 1,
+      "steps": 2188,
+      "turns": 551,
+      "result": "winner"
+    },
+    {
+      "seed": 75,
+      "dice": 1,
+      "first_player": 0,
+      "steps": 845,
+      "turns": 196,
+      "result": "winner"
+    },
+    {
+      "seed": 76,
+      "dice": 1,
+      "first_player": 1,
+      "steps": 1462,
+      "turns": 321,
+      "result": "winner"
+    },
+    {
+      "seed": 77,
+      "dice": 0,
+      "first_player": 0,
+      "steps": 982,
+      "turns": 254,
+      "result": "winner"
+    },
+    {
+      "seed": 78,
+      "dice": 0,
+      "first_player": 1,
+      "steps": 2460,
+      "turns": 620,
+      "result": "winner"
+    },
+    {
+      "seed": 79,
+      "dice": 1,
+      "first_player": 0,
+      "steps": 1409,
+      "turns": 318,
+      "result": "winner"
+    },
+    {
+      "seed": 80,
+      "dice": 1,
+      "first_player": 1,
+      "steps": 1038,
+      "turns": 230,
+      "result": "winner"
+    },
+    {
+      "seed": 81,
+      "dice": 0,
+      "first_player": 0,
+      "steps": 3210,
+      "turns": 749,
+      "result": "winner"
+    },
+    {
+      "seed": 82,
+      "dice": 0,
+      "first_player": 1,
+      "steps": 716,
+      "turns": 167,
+      "result": "winner"
+    },
+    {
+      "seed": 83,
+      "dice": 1,
+      "first_player": 0,
+      "steps": 1313,
+      "turns": 332,
+      "result": "winner"
+    },
+    {
+      "seed": 84,
+      "dice": 1,
+      "first_player": 1,
+      "steps": 2272,
+      "turns": 546,
+      "result": "winner"
+    },
+    {
+      "seed": 85,
+      "dice": 0,
+      "first_player": 0,
+      "steps": 1757,
+      "turns": 405,
+      "result": "winner"
+    },
+    {
+      "seed": 86,
+      "dice": 0,
+      "first_player": 1,
+      "steps": 2004,
+      "turns": 506,
+      "result": "winner"
+    },
+    {
+      "seed": 87,
+      "dice": 1,
+      "first_player": 0,
+      "steps": 2394,
+      "turns": 586,
+      "result": "winner"
+    },
+    {
+      "seed": 88,
+      "dice": 1,
+      "first_player": 1,
+      "steps": 1641,
+      "turns": 380,
+      "result": "winner"
+    },
+    {
+      "seed": 89,
+      "dice": 0,
+      "first_player": 0,
+      "steps": 697,
+      "turns": 168,
+      "result": "winner"
+    },
+    {
+      "seed": 90,
+      "dice": 0,
+      "first_player": 1,
+      "steps": 1579,
+      "turns": 384,
+      "result": "winner"
+    },
+    {
+      "seed": 91,
+      "dice": 1,
+      "first_player": 0,
+      "steps": 3558,
+      "turns": 844,
+      "result": "winner"
+    },
+    {
+      "seed": 92,
+      "dice": 1,
+      "first_player": 1,
+      "steps": 1544,
+      "turns": 361,
+      "result": "winner"
+    },
+    {
+      "seed": 93,
+      "dice": 0,
+      "first_player": 0,
+      "steps": 2288,
+      "turns": 594,
+      "result": "winner"
+    },
+    {
+      "seed": 94,
+      "dice": 0,
+      "first_player": 1,
+      "steps": 1681,
+      "turns": 440,
+      "result": "winner"
+    },
+    {
+      "seed": 95,
+      "dice": 1,
+      "first_player": 0,
+      "steps": 2312,
+      "turns": 588,
+      "result": "winner"
+    },
+    {
+      "seed": 96,
+      "dice": 1,
+      "first_player": 1,
+      "steps": 2348,
+      "turns": 538,
+      "result": "winner"
+    },
+    {
+      "seed": 97,
+      "dice": 0,
+      "first_player": 0,
+      "steps": 1188,
+      "turns": 285,
+      "result": "winner"
+    },
+    {
+      "seed": 98,
+      "dice": 0,
+      "first_player": 1,
+      "steps": 1746,
+      "turns": 422,
+      "result": "winner"
+    },
+    {
+      "seed": 99,
+      "dice": 1,
+      "first_player": 0,
+      "steps": 1138,
+      "turns": 240,
+      "result": "winner"
+    },
+    {
+      "seed": 100,
+      "dice": 1,
+      "first_player": 1,
+      "steps": 2619,
+      "turns": 642,
+      "result": "winner"
+    },
+    {
+      "seed": 101,
+      "dice": 0,
+      "first_player": 0,
+      "steps": 1901,
+      "turns": 474,
+      "result": "winner"
+    },
+    {
+      "seed": 102,
+      "dice": 0,
+      "first_player": 1,
+      "steps": 2561,
+      "turns": 646,
+      "result": "winner"
+    },
+    {
+      "seed": 103,
+      "dice": 1,
+      "first_player": 0,
+      "steps": 2392,
+      "turns": 603,
+      "result": "winner"
+    },
+    {
+      "seed": 104,
+      "dice": 1,
+      "first_player": 1,
+      "steps": 2156,
+      "turns": 568,
+      "result": "winner"
+    },
+    {
+      "seed": 105,
+      "dice": 0,
+      "first_player": 0,
+      "steps": 1967,
+      "turns": 496,
+      "result": "winner"
+    },
+    {
+      "seed": 106,
+      "dice": 0,
+      "first_player": 1,
+      "steps": 1561,
+      "turns": 370,
+      "result": "winner"
+    },
+    {
+      "seed": 107,
+      "dice": 1,
+      "first_player": 0,
+      "steps": 1961,
+      "turns": 464,
+      "result": "winner"
+    },
+    {
+      "seed": 108,
+      "dice": 1,
+      "first_player": 1,
+      "steps": 2384,
+      "turns": 612,
+      "result": "winner"
+    },
+    {
+      "seed": 109,
+      "dice": 0,
+      "first_player": 0,
+      "steps": 3862,
+      "turns": 1087,
+      "result": "winner"
+    },
+    {
+      "seed": 110,
+      "dice": 0,
+      "first_player": 1,
+      "steps": 1565,
+      "turns": 320,
+      "result": "winner"
+    },
+    {
+      "seed": 111,
+      "dice": 1,
+      "first_player": 0,
+      "steps": 1604,
+      "turns": 383,
+      "result": "winner"
+    },
+    {
+      "seed": 112,
+      "dice": 1,
+      "first_player": 1,
+      "steps": 2870,
+      "turns": 707,
+      "result": "winner"
+    },
+    {
+      "seed": 113,
+      "dice": 0,
+      "first_player": 0,
+      "steps": 2788,
+      "turns": 743,
+      "result": "winner"
+    },
+    {
+      "seed": 114,
+      "dice": 0,
+      "first_player": 1,
+      "steps": 2007,
+      "turns": 448,
+      "result": "winner"
+    },
+    {
+      "seed": 115,
+      "dice": 1,
+      "first_player": 0,
+      "steps": 1378,
+      "turns": 334,
+      "result": "winner"
+    },
+    {
+      "seed": 116,
+      "dice": 1,
+      "first_player": 1,
+      "steps": 1720,
+      "turns": 443,
+      "result": "winner"
+    },
+    {
+      "seed": 117,
+      "dice": 0,
+      "first_player": 0,
+      "steps": 2716,
+      "turns": 705,
+      "result": "winner"
+    },
+    {
+      "seed": 118,
+      "dice": 0,
+      "first_player": 1,
+      "steps": 1295,
+      "turns": 308,
+      "result": "winner"
+    },
+    {
+      "seed": 119,
+      "dice": 1,
+      "first_player": 0,
+      "steps": 1211,
+      "turns": 298,
+      "result": "winner"
+    },
+    {
+      "seed": 120,
+      "dice": 1,
+      "first_player": 1,
+      "steps": 1303,
+      "turns": 300,
+      "result": "winner"
+    },
+    {
+      "seed": 121,
+      "dice": 0,
+      "first_player": 0,
+      "steps": 707,
+      "turns": 182,
+      "result": "winner"
+    },
+    {
+      "seed": 122,
+      "dice": 0,
+      "first_player": 1,
+      "steps": 1684,
+      "turns": 463,
+      "result": "winner"
+    },
+    {
+      "seed": 123,
+      "dice": 1,
+      "first_player": 0,
+      "steps": 1145,
+      "turns": 291,
+      "result": "winner"
+    },
+    {
+      "seed": 124,
+      "dice": 1,
+      "first_player": 1,
+      "steps": 2093,
+      "turns": 517,
+      "result": "winner"
+    },
+    {
+      "seed": 125,
+      "dice": 0,
+      "first_player": 0,
+      "steps": 1379,
+      "turns": 322,
+      "result": "winner"
+    },
+    {
+      "seed": 126,
+      "dice": 0,
+      "first_player": 1,
+      "steps": 1656,
+      "turns": 363,
+      "result": "winner"
+    },
+    {
+      "seed": 127,
+      "dice": 1,
+      "first_player": 0,
+      "steps": 1811,
+      "turns": 444,
+      "result": "winner"
+    },
+    {
+      "seed": 128,
+      "dice": 1,
+      "first_player": 1,
+      "steps": 838,
+      "turns": 213,
+      "result": "winner"
+    },
+    {
+      "seed": 129,
+      "dice": 0,
+      "first_player": 0,
+      "steps": 781,
+      "turns": 193,
+      "result": "winner"
+    },
+    {
+      "seed": 130,
+      "dice": 0,
+      "first_player": 1,
+      "steps": 3292,
+      "turns": 814,
+      "result": "winner"
+    },
+    {
+      "seed": 131,
+      "dice": 1,
+      "first_player": 0,
+      "steps": 1257,
+      "turns": 304,
+      "result": "winner"
+    },
+    {
+      "seed": 132,
+      "dice": 1,
+      "first_player": 1,
+      "steps": 917,
+      "turns": 221,
+      "result": "winner"
+    },
+    {
+      "seed": 133,
+      "dice": 0,
+      "first_player": 0,
+      "steps": 1218,
+      "turns": 268,
+      "result": "winner"
+    },
+    {
+      "seed": 134,
+      "dice": 0,
+      "first_player": 1,
+      "steps": 1341,
+      "turns": 333,
+      "result": "winner"
+    },
+    {
+      "seed": 135,
+      "dice": 1,
+      "first_player": 0,
+      "steps": 1219,
+      "turns": 316,
+      "result": "winner"
+    },
+    {
+      "seed": 136,
+      "dice": 1,
+      "first_player": 1,
+      "steps": 2012,
+      "turns": 540,
+      "result": "winner"
+    },
+    {
+      "seed": 137,
+      "dice": 0,
+      "first_player": 0,
+      "steps": 1579,
+      "turns": 357,
+      "result": "winner"
+    },
+    {
+      "seed": 138,
+      "dice": 0,
+      "first_player": 1,
+      "steps": 1665,
+      "turns": 368,
+      "result": "winner"
+    },
+    {
+      "seed": 139,
+      "dice": 1,
+      "first_player": 0,
+      "steps": 1196,
+      "turns": 263,
+      "result": "winner"
+    },
+    {
+      "seed": 140,
+      "dice": 1,
+      "first_player": 1,
+      "steps": 2234,
+      "turns": 492,
+      "result": "winner"
+    },
+    {
+      "seed": 141,
+      "dice": 0,
+      "first_player": 0,
+      "steps": 2046,
+      "turns": 483,
+      "result": "winner"
+    },
+    {
+      "seed": 142,
+      "dice": 0,
+      "first_player": 1,
+      "steps": 1964,
+      "turns": 504,
+      "result": "winner"
+    },
+    {
+      "seed": 143,
+      "dice": 1,
+      "first_player": 0,
+      "steps": 4433,
+      "turns": 953,
+      "result": "winner"
+    },
+    {
+      "seed": 144,
+      "dice": 1,
+      "first_player": 1,
+      "steps": 3872,
+      "turns": 878,
+      "result": "winner"
+    },
+    {
+      "seed": 145,
+      "dice": 0,
+      "first_player": 0,
+      "steps": 1292,
+      "turns": 311,
+      "result": "winner"
+    },
+    {
+      "seed": 146,
+      "dice": 0,
+      "first_player": 1,
+      "steps": 652,
+      "turns": 144,
+      "result": "winner"
+    },
+    {
+      "seed": 147,
+      "dice": 1,
+      "first_player": 0,
+      "steps": 4540,
+      "turns": 910,
+      "result": "winner"
+    },
+    {
+      "seed": 148,
+      "dice": 1,
+      "first_player": 1,
+      "steps": 548,
+      "turns": 122,
+      "result": "winner"
+    },
+    {
+      "seed": 149,
+      "dice": 0,
+      "first_player": 0,
+      "steps": 2000,
+      "turns": 461,
+      "result": "winner"
+    },
+    {
+      "seed": 150,
+      "dice": 0,
+      "first_player": 1,
+      "steps": 1502,
+      "turns": 379,
+      "result": "winner"
+    },
+    {
+      "seed": 151,
+      "dice": 1,
+      "first_player": 0,
+      "steps": 1495,
+      "turns": 363,
+      "result": "winner"
+    },
+    {
+      "seed": 152,
+      "dice": 1,
+      "first_player": 1,
+      "steps": 851,
+      "turns": 193,
+      "result": "winner"
+    },
+    {
+      "seed": 153,
+      "dice": 0,
+      "first_player": 0,
+      "steps": 1918,
+      "turns": 457,
+      "result": "winner"
+    },
+    {
+      "seed": 154,
+      "dice": 0,
+      "first_player": 1,
+      "steps": 2154,
+      "turns": 580,
+      "result": "winner"
+    },
+    {
+      "seed": 155,
+      "dice": 1,
+      "first_player": 0,
+      "steps": 2626,
+      "turns": 673,
+      "result": "winner"
+    },
+    {
+      "seed": 156,
+      "dice": 1,
+      "first_player": 1,
+      "steps": 1589,
+      "turns": 367,
+      "result": "winner"
+    },
+    {
+      "seed": 157,
+      "dice": 0,
+      "first_player": 0,
+      "steps": 1981,
+      "turns": 500,
+      "result": "winner"
+    },
+    {
+      "seed": 158,
+      "dice": 0,
+      "first_player": 1,
+      "steps": 3115,
+      "turns": 731,
+      "result": "winner"
+    },
+    {
+      "seed": 159,
+      "dice": 1,
+      "first_player": 0,
+      "steps": 1776,
+      "turns": 435,
+      "result": "winner"
+    },
+    {
+      "seed": 160,
+      "dice": 1,
+      "first_player": 1,
+      "steps": 3240,
+      "turns": 778,
+      "result": "winner"
+    },
+    {
+      "seed": 161,
+      "dice": 0,
+      "first_player": 0,
+      "steps": 3048,
+      "turns": 644,
+      "result": "winner"
+    },
+    {
+      "seed": 162,
+      "dice": 0,
+      "first_player": 1,
+      "steps": 2093,
+      "turns": 453,
+      "result": "winner"
+    },
+    {
+      "seed": 163,
+      "dice": 1,
+      "first_player": 0,
+      "steps": 1142,
+      "turns": 270,
+      "result": "winner"
+    },
+    {
+      "seed": 164,
+      "dice": 1,
+      "first_player": 1,
+      "steps": 1651,
+      "turns": 369,
+      "result": "winner"
+    },
+    {
+      "seed": 165,
+      "dice": 0,
+      "first_player": 0,
+      "steps": 2731,
+      "turns": 708,
+      "result": "winner"
+    },
+    {
+      "seed": 166,
+      "dice": 0,
+      "first_player": 1,
+      "steps": 1290,
+      "turns": 322,
+      "result": "winner"
+    },
+    {
+      "seed": 167,
+      "dice": 1,
+      "first_player": 0,
+      "steps": 1790,
+      "turns": 434,
+      "result": "winner"
+    },
+    {
+      "seed": 168,
+      "dice": 1,
+      "first_player": 1,
+      "steps": 1559,
+      "turns": 373,
+      "result": "winner"
+    },
+    {
+      "seed": 169,
+      "dice": 0,
+      "first_player": 0,
+      "steps": 2741,
+      "turns": 654,
+      "result": "winner"
+    },
+    {
+      "seed": 170,
+      "dice": 0,
+      "first_player": 1,
+      "steps": 2655,
+      "turns": 674,
+      "result": "winner"
+    },
+    {
+      "seed": 171,
+      "dice": 1,
+      "first_player": 0,
+      "steps": 3161,
+      "turns": 730,
+      "result": "winner"
+    },
+    {
+      "seed": 172,
+      "dice": 1,
+      "first_player": 1,
+      "steps": 2792,
+      "turns": 681,
+      "result": "winner"
+    },
+    {
+      "seed": 173,
+      "dice": 0,
+      "first_player": 0,
+      "steps": 2469,
+      "turns": 649,
+      "result": "winner"
+    },
+    {
+      "seed": 174,
+      "dice": 0,
+      "first_player": 1,
+      "steps": 2322,
+      "turns": 580,
+      "result": "winner"
+    },
+    {
+      "seed": 175,
+      "dice": 1,
+      "first_player": 0,
+      "steps": 2311,
+      "turns": 544,
+      "result": "winner"
+    },
+    {
+      "seed": 176,
+      "dice": 1,
+      "first_player": 1,
+      "steps": 838,
+      "turns": 197,
+      "result": "winner"
+    },
+    {
+      "seed": 177,
+      "dice": 0,
+      "first_player": 0,
+      "steps": 3434,
+      "turns": 780,
+      "result": "winner"
+    },
+    {
+      "seed": 178,
+      "dice": 0,
+      "first_player": 1,
+      "steps": 2464,
+      "turns": 603,
+      "result": "winner"
+    },
+    {
+      "seed": 179,
+      "dice": 1,
+      "first_player": 0,
+      "steps": 1272,
+      "turns": 312,
+      "result": "winner"
+    },
+    {
+      "seed": 180,
+      "dice": 1,
+      "first_player": 1,
+      "steps": 3221,
+      "turns": 776,
+      "result": "winner"
+    },
+    {
+      "seed": 181,
+      "dice": 0,
+      "first_player": 0,
+      "steps": 2312,
+      "turns": 579,
+      "result": "winner"
+    },
+    {
+      "seed": 182,
+      "dice": 0,
+      "first_player": 1,
+      "steps": 1771,
+      "turns": 393,
+      "result": "winner"
+    },
+    {
+      "seed": 183,
+      "dice": 1,
+      "first_player": 0,
+      "steps": 973,
+      "turns": 218,
+      "result": "winner"
+    },
+    {
+      "seed": 184,
+      "dice": 1,
+      "first_player": 1,
+      "steps": 2521,
+      "turns": 602,
+      "result": "winner"
+    },
+    {
+      "seed": 185,
+      "dice": 0,
+      "first_player": 0,
+      "steps": 848,
+      "turns": 228,
+      "result": "winner"
+    },
+    {
+      "seed": 186,
+      "dice": 0,
+      "first_player": 1,
+      "steps": 1442,
+      "turns": 361,
+      "result": "winner"
+    },
+    {
+      "seed": 187,
+      "dice": 1,
+      "first_player": 0,
+      "steps": 2647,
+      "turns": 708,
+      "result": "winner"
+    },
+    {
+      "seed": 188,
+      "dice": 1,
+      "first_player": 1,
+      "steps": 2002,
+      "turns": 460,
+      "result": "winner"
+    },
+    {
+      "seed": 189,
+      "dice": 0,
+      "first_player": 0,
+      "steps": 1986,
+      "turns": 544,
+      "result": "winner"
+    },
+    {
+      "seed": 190,
+      "dice": 0,
+      "first_player": 1,
+      "steps": 1123,
+      "turns": 278,
+      "result": "winner"
+    },
+    {
+      "seed": 191,
+      "dice": 1,
+      "first_player": 0,
+      "steps": 1763,
+      "turns": 402,
+      "result": "dead"
+    },
+    {
+      "seed": 192,
+      "dice": 1,
+      "first_player": 1,
+      "steps": 4096,
+      "turns": 952,
+      "result": "winner"
+    },
+    {
+      "seed": 193,
+      "dice": 0,
+      "first_player": 0,
+      "steps": 498,
+      "turns": 118,
+      "result": "winner"
+    },
+    {
+      "seed": 194,
+      "dice": 0,
+      "first_player": 1,
+      "steps": 2441,
+      "turns": 520,
+      "result": "winner"
+    },
+    {
+      "seed": 195,
+      "dice": 1,
+      "first_player": 0,
+      "steps": 2070,
+      "turns": 482,
+      "result": "winner"
+    },
+    {
+      "seed": 196,
+      "dice": 1,
+      "first_player": 1,
+      "steps": 3406,
+      "turns": 826,
+      "result": "winner"
+    },
+    {
+      "seed": 197,
+      "dice": 0,
+      "first_player": 0,
+      "steps": 635,
+      "turns": 162,
+      "result": "winner"
+    },
+    {
+      "seed": 198,
+      "dice": 0,
+      "first_player": 1,
+      "steps": 2292,
+      "turns": 559,
+      "result": "winner"
+    },
+    {
+      "seed": 199,
+      "dice": 1,
+      "first_player": 0,
+      "steps": 2067,
+      "turns": 482,
+      "result": "winner"
+    },
+    {
+      "seed": 200,
+      "dice": 1,
+      "first_player": 1,
+      "steps": 1958,
+      "turns": 481,
+      "result": "winner"
+    },
+    {
+      "seed": 201,
+      "dice": 0,
+      "first_player": 0,
+      "steps": 857,
+      "turns": 204,
+      "result": "winner"
+    },
+    {
+      "seed": 202,
+      "dice": 0,
+      "first_player": 1,
+      "steps": 1927,
+      "turns": 454,
+      "result": "winner"
+    },
+    {
+      "seed": 203,
+      "dice": 1,
+      "first_player": 0,
+      "steps": 2184,
+      "turns": 473,
+      "result": "winner"
+    },
+    {
+      "seed": 204,
+      "dice": 1,
+      "first_player": 1,
+      "steps": 2339,
+      "turns": 490,
+      "result": "winner"
+    },
+    {
+      "seed": 205,
+      "dice": 0,
+      "first_player": 0,
+      "steps": 1234,
+      "turns": 301,
+      "result": "winner"
+    }
+  ],
+  "right_censored": [
+    {
+      "seed": 206,
+      "steps_at_least": 6159
+    }
+  ],
+  "superseded_censor_bounds": []
+}
