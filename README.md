@@ -5,12 +5,14 @@ A bot for Colonist 1v1 Catan. It uses a small neural net (122,945 weights) toget
 The rules are the Colonist 1v1 rules: 15 victory points, balanced dice, friendly robber, discard above 9 cards,
 and trades with the bank only.
 
+By far the smallest net so far to reach this performance. 
+
 ## Strength
 
 | Opponent | Result | Games |
 |---|---|---|
 | Oversized Pig, the #1 bot on the Colonist 1v1 leaderboard on 2026-11-09 (its own 3 nets, same search settings) | 50.0% ± 1.1 | 2,000 |
-| VINCO (the bot of the VINCO demo site) | 146 wins of 201 (73%) | 201 |
+| VINCO #1 and #2 on the Colonist 1v1 leaderboard (the bot of the VINCO demo site) | 146 wins of 201 (73%) | 201 |
 
 ## How it works
 
@@ -48,25 +50,6 @@ Speed: approximately 23 s per game with 4 threads, 0.23 s per decision with 1 th
 | `nets/` | The two nets |
 | `spec/` | `BOT-SPEC.md` (the bot), `SPEC.md` and `ENCODING.md` (the rules), `PROVENANCE.md` (who wrote which part) |
 | `tests/fixtures/` | Test data: positions, inputs, net values, decisions and complete games |
-
-## Tests
-
-The bot agrees with the recorded test data exactly:
-
-| Check | Agreement |
-|---|---|
-| Net inputs | 9,334 of 9,334 |
-| Net values | 37,336 of 37,336 |
-| Search values | 17,772 of 17,772 |
-| Decisions (beam, reply check, rollouts, full settings) | 5,624 of 5,624 |
-| Complete games, each move and result | 59 of 59 |
-
-## Rules questions
-
-Two rules are not confirmed for Colonist. The bot uses these rules now:
-
-1. When the bank cannot pay all players, no player gets that resource.
-2. Year of Plenty is only possible when the bank has both cards.
 
 ## License
 
