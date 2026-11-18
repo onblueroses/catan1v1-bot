@@ -13,6 +13,7 @@ By far the smallest net so far to reach this performance.
 |---|---|---|
 | Oversized Pig, the #1 bot on the Colonist 1v1 leaderboard on 2026-11-09 (its own 3 nets, same search settings) | 50.0% ± 1.1 | 2,000 |
 | VINCO #1 and #2 on the Colonist 1v1 leaderboard (the bot of the VINCO demo site) | 146 wins of 201 (73%) | 201 |
+| GPT-6 Astra (OpenAI, medium reasoning), playing through a text interface to the game | 16 wins of 20 (80%) | 20 |
 
 ## How it works
 
