@@ -10,11 +10,10 @@ reference code or its Rust port.
 
 - The reference bot, Oversized Pig by Wei Hu (`colonizing-pig`, commit `3eb2be8`). It has no licence. Only its
   behaviour and numeric facts were taken from it, mostly through the port below.
-- The line-by-line Rust port of it in a private repository (commit `23bac21`, mirrored as `d01d3af` on a separate
-  machine with identical sources), including its `PORT.md` parity record.
-- Our study notes `SEARCH.md`, `FEATURES.md`, `ENGINE-COMPARISON.md` and `RESULTS.md` (the VINCO settings), and the
-  VINCO run scripts (for the exact settings string).
-- Our engine `catan_engine` (`engine/`, a copy of our engine repository at `fe9a482`) and its encoding notes.
+- A line-by-line Rust port of it, with its parity record.
+- Our study notes on search, features, engine comparison and results (the VINCO settings), and the run
+  scripts (for the exact settings string).
+- Our engine (`engine/`) and its encoding notes.
 
 ## Rules followed
 
@@ -82,7 +81,7 @@ crate `bot/` from these sources only:
   described in BOT-SPEC 5.5).
 
 The implementer did not open, read, list or search any of the forbidden paths: the earlier port, the reference code,
-the fixture generator, the earlier code audit and the working records of the other instances, on all machines.
+the fixture generator and the earlier code audit.
 It did not search the web for the reference bot or its author.
 Where the spec was unclear, the fixtures decided; each such reading is in `bot/NOTES.md`.
 
